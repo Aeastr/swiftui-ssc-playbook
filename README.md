@@ -2,7 +2,7 @@
 
 **Service + Store + Coordinator** — a practical SwiftUI architecture pattern.
 
-This playbook explains how to structure the layer between your views and your backend in a way that stays clean as your app grows. It's one opinionated approach, born out of building a real app (Rally), not a theoretical exercise.
+This is mostly a rulebook for myself — a way to write down the structure I landed on while building Rally so I can stay consistent and reference it later. If it's useful to you too, great, but it's written from my experience, not as a universal standard.
 
 Two documents:
 

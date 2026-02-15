@@ -140,7 +140,7 @@ final class RuntimePolicyCoordinator {
 
 Without this coordinator, every feature that cares about power state would need its own `if isLowPowerMode && thermalState != .critical ...` logic. The map screen, the social realtime listener, and future features would each reinvent the same policy with slightly different bugs. The coordinator centralizes that decision once.
 
-Coordinators are **not** a place for backend calls. They don't fetch data from APIs. They observe system/runtime signals and compute policy outputs. If you find yourself putting `try await someService.fetch(...)` inside a coordinator, that logic probably belongs in a store or service instead.
+Coordinators are **not** a place for I/O. They don't make network requests, write to disk, or reach into databases. They observe signals and compute policy outputs. If you find yourself importing a service or calling `try await` inside a coordinator, that logic probably belongs in a store or service instead.
 
 Most coordinators are `@Observable` since their outputs drive UI behavior.
 
